@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name ="viewport" content = "width=device-width, intial-scale=1.0">
+        <title> paginationn Design - Easy Tutorials</title>
+         <link rel="'stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="'pagination">
+                <button class="btn1" onClick="backBtn()"><img src="arrow.png"> prev</button>
+                <u1>
+                   <li class="link active" value="1" oneclick="activeLink()">1</li>
+                   <li class="link" value="2"oneclick="activeLink()">2</li>
+                   <li class="link" value="3"oneclick="activeLink()">3</li>
+                   <li class="link" value="4"oneclick="activeLink()">4</li>
+                   <li class="link" value="5"oneclick="activeLink()">5</li>
+                   <li class="link" value="6"oneclick="activeLink()">6</li>
+                </u1>
+                <button classs="btn2" onclick="nextBtn()"><img src="arrow.png">next</button>
+
+            </div>
+        </div>
+        <script>
+            let link = document.getElementsByClassName("link");
+            let currentValue = 1;
+            function activeLink(){
+                for(1 of link){
+                    1.classList.remove("active");
+                }
+                event.target.classList.add("active");
+                currentValue = event.target.Value;
+
+            }
+            function BackBtn(){
+                if(currentValue > 1){
+                    for(1 of link){
+                    1.classList.remove("active");
+                }
+                currentValue--;
+                link[currentValue-1].classList.add("active");
+            }
+
+
+        }
+        function nextBtn(){
+            if(currentValue < 6){
+                for(1 of link){
+                    1.classlist.remove("active");
+                }
+                currentValue--;
+                link[currentValue-1].classList.add("active");
+            }
+        }
+
+    
